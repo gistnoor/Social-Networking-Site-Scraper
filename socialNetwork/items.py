@@ -7,10 +7,6 @@
 
 import scrapy
 
-
 class SocialnetworkItem(scrapy.Item):
     name = scrapy.Field()
     description = scrapy.Field()
-    dateLaunched = scrapy.Field()
-    registration = scrapy.Field()
-    
