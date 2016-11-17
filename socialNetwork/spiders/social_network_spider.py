@@ -21,8 +21,8 @@ class SocialNetworkSpider(scrapy.Spider):
             description = table_row.xpath("//tr/td[1]/text()").extract_first()
 
             yield {
-                'site': self._site_name(site.encode('utf-8'), table_row),
-                'description': description
+                'description': description,
+                'site': self._site_name(site.encode('utf-8'), table_row)
             }
 
     def _site_name(self, content, row):
